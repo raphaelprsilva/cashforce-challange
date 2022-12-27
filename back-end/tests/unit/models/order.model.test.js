@@ -32,4 +32,22 @@ describe('OrderModel tests ', () => {
       'providerId',
     ].forEach(checkPropertyExists(order));
   });
+
+  describe('Has associations', () => {
+    const Buyer = 'Buyer';
+    const Provider = 'Provider';
+
+    before(() => {
+      Order.associate({ Buyer });
+      Order.associate({ Provider });
+    });
+
+    it('defined a belongsTo association with Buyer', () => {
+      expect(Order.belongsTo).to.have.been.calledWith(Buyer);
+    });
+
+    it('defined a belongsTo association with Provider', () => {
+      expect(Order.belongsTo).to.have.been.calledWith(Provider);
+    });
+  });
 });
