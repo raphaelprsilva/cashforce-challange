@@ -20,4 +20,16 @@ describe('OrderModel tests ', () => {
   describe('Has name "Order"', () => {
     checkModelName(Order)('Order');
   });
+
+  describe('Has all required properties', () => {
+    [
+      'orderNfId',
+      'emissionDate',
+      'value',
+      'orderStatusBuyer',
+      'orderNumber',
+      'buyerId',
+      'providerId',
+    ].forEach(checkPropertyExists(order));
+  });
 });
