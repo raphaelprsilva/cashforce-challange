@@ -23,6 +23,7 @@
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-mocha": "^10.1.0",
     "eslint-plugin-sonarjs": "^0.17.0",
+    "nodemon": "^2.0.19",
     "sequelize-cli": "6.2"
   }
 }
