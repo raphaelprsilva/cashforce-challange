@@ -1,0 +1,58 @@
+:root {
+  --black: rgba(0, 0, 0, 1);
+  --persian-green: rgba(0, 173, 140, 1);
+  --scarpa-flow: rgba(76, 84, 101, 1);
+  --slate-gray: rgba(114, 125, 148, 1);
+  --gray-chateau: rgba(161, 168, 184, 1);
+  --periwinkle: rgba(202, 211, 255, 1);
+  --mystic: rgba(223, 226, 235, 1);
+  --white: rgba(255, 255, 255, 1);
+
+  --font-size-s: 12px;
+  --font-size-m: 14px;
+  --font-size-l: 24px;
+
+  --font-family-dm_sans: "DM Sans";
+}
+
+/* Classes */
+
+.dmsans-medium-persian-green-14px {
+  color: var(--persian-green);
+  font-family: var(--font-family-dm_sans);
+  font-size: var(--font-size-m);
+  font-weight: 500;
+  font-style: normal;
+}
+
+.dmsans-bold-gray-chateau-12px {
+  color: var(--gray-chateau);
+  font-family: var(--font-family-dm_sans);
+  font-size: var(--font-size-s);
+  font-weight: 700;
+  font-style: normal;
+}
+
+.dmsans-medium-scarpa-flow-14px {
+  color: var(--scarpa-flow);
+  font-family: var(--font-family-dm_sans);
+  font-size: var(--font-size-m);
+  font-weight: 500;
+  font-style: normal;
+}
+
+.dmsans-bold-persian-green-12px {
+  color: var(--persian-green);
+  font-family: var(--font-family-dm_sans);
+  font-size: var(--font-size-s);
+  font-weight: 700;
+  font-style: normal;
+}
+
+.dmsans-bold-slate-gray-12px {
+  color: var(--slate-gray);
+  font-family: var(--font-family-dm_sans);
+  font-size: var(--font-size-s);
+  font-weight: 700;
+  font-style: normal;
+}
