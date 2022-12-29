@@ -1,9 +1,14 @@
 <script>
+import MainProposals from "./components/MainProposals.vue";
+
 export default {
   name: "App",
+  components: {
+    MainProposals,
+  },
 };
 </script>
 
 <template>
-  <p>Cashforce Challange</p>
+  <MainProposals />
 </template>
