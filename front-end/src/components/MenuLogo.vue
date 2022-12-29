@@ -1,3 +1,10 @@
+<script>
+export default {
+  name: "MenuLogo",
+  props: ["logo"],
+};
+</script>
+
 <template>
   <div class="menu-hero">
     <div class="sider-logo">
@@ -5,13 +12,6 @@
     </div>
   </div>
 </template>
-
-<script>
-export default {
-  name: "MenuLogo",
-  props: ["logo"],
-};
-</script>
 
 <style>
 .menu-hero {

@@ -1,3 +1,10 @@
+<script>
+export default {
+  name: "MenuItemSelected",
+  props: ["frame679", "propostas"],
+};
+</script>
+
 <template>
   <div class="menu-itemselected">
     <div class="menu-item-selected-rectangle">
@@ -15,13 +22,6 @@
     </div>
   </div>
 </template>
-
-<script>
-export default {
-  name: "MenuItemSelected",
-  props: ["frame679", "propostas"],
-};
-</script>
 
 <style>
 .menu-item {
