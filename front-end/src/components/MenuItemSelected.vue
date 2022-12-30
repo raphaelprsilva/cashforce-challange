@@ -34,6 +34,7 @@ export default {
 
 .menu-itemselected {
   align-items: center;
+  cursor: pointer;
   display: flex;
   gap: 21px;
   height: 64px;
