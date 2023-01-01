@@ -103,7 +103,7 @@ export default {
   border-color: var(--mystic);
   border-radius: 6px;
   height: 48px;
-  min-width: 1177px;
+  min-width: 1294px;
 }
 
 .table-row {
@@ -165,22 +165,8 @@ export default {
   letter-spacing: 0;
   line-height: normal;
   margin-bottom: 2px;
-  margin-left: 86px;
-  min-width: 59px;
+  margin-left: 78px;
+  min-width: 170px;
   text-align: center;
-}
-
-@media screen and (max-width: 1794px) {
-  .table-row-container {
-    min-width: 1100px;
-  }
-
-  .table-row {
-    min-width: 1071px;
-  }
-
-  .table-row-link-sacado {
-    margin-left: 94px;
-  }
 }
 </style>

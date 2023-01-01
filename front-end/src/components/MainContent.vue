@@ -27,5 +27,6 @@ export default {
   padding-left: 20rem;
   flex-direction: column;
   min-width: 100%;
+  position: fixed;
 }
 </style>

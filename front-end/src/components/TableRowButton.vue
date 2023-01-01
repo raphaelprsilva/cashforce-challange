@@ -33,10 +33,4 @@ export default {
   margin-top: -1px;
   width: fit-content;
 }
-
-@media screen and (max-width: 1794px) {
-  .botoes-principais {
-    margin-left: 59px;
-  }
-}
 </style>

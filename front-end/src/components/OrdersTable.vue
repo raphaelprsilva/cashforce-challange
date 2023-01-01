@@ -82,19 +82,18 @@ export default {
 
 <style>
 .orders-table-container {
-  align-items: center;
+  align-items: flex-start;
   display: flex;
   flex-direction: column;
   gap: 16px;
   left: 336px;
   padding: 2.5rem;
   top: 176px;
-  width: fit-content;
 }
 
 .tableheader-propostas {
   height: 22px;
-  min-width: 1177px;
+  min-width: 1294px;
 }
 
 .table-head-link-container {
@@ -150,19 +149,5 @@ export default {
   letter-spacing: 0;
   line-height: normal;
   margin-left: 132px;
-}
-
-@media screen and (max-width: 1794px) {
-  .orders-table-container {
-    width: 1200px;
-  }
-
-  .table-head-link-sacado {
-    margin-left: 47px;
-  }
-
-  .tableheader-propostas {
-    min-width: 1100px;
-  }
 }
 </style>
