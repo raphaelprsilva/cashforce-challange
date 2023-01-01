@@ -6,12 +6,56 @@ export default {
   components: {
     OrderTableRow,
   },
+  data() {
+    return {
+      orders: [],
+      isLoading: false,
+      error: null,
+    };
+  },
+  methods: {
+    getOrders() {
+      this.isLoading = true;
+      this.error = null;
+      fetch("http://localhost:3001/orders", {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
+        .then((response) => {
+          if (response.ok) {
+            return response.json();
+          }
+        })
+        .then((data) => {
+          this.isLoading = false;
+          this.orders = data;
+        })
+        .catch((error) => {
+          console.error(error);
+          this.isLoading = false;
+          this.error = "Erro ao carregar as notas";
+        });
+    },
+  },
+  mounted() {
+    this.getOrders();
+  },
 };
 </script>
 
 <template>
   <div class="orders-table-container">
-    <div class="tableheader-propostas">
+    <p v-if="isLoading">loading...</p>
+    <p v-else-if="!isLoading && error">{{ error }}</p>
+    <span v-else-if="!isLoading && (!orders || orders.length == 0)"
+      >Não foram encontradas notas fiscais.</span
+    >
+    <div
+      v-else-if="!isLoading && orders.length > 0"
+      class="tableheader-propostas"
+    >
       <div class="table-head-link-container dmsans-bold-gray-chateau-12px">
         <div class="table-head-link-nota-fiscal valign-text-middle">
           Nota Fiscal
