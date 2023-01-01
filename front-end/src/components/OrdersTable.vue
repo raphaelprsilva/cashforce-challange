@@ -67,9 +67,16 @@ export default {
         <div class="table-head-link-status valign-text-middle">Status</div>
       </div>
     </div>
-    <OrderTableRow />
-    <OrderTableRow />
-    <OrderTableRow />
+    <OrderTableRow
+      v-for="order in orders"
+      :key="order.orderNfId"
+      :orderNumber="order.orderNumber"
+      :buyer="order.buyer"
+      :provider="order.provider"
+      :emissionDate="order.emissionDate"
+      :orderValue="order.value"
+      :oderStatusBuyer="order.orderStatusBuyer"
+    />
   </div>
 </template>
 
