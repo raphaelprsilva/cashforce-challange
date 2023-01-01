@@ -6,6 +6,55 @@ export default {
   components: {
     TableRowButton,
   },
+  methods: {
+    formatDate(dateString) {
+      const date = new Date(dateString);
+      return date.toLocaleDateString("pt-BR", {
+        day: "2-digit",
+        month: "2-digit",
+        year: "numeric",
+      });
+    },
+    formatOrderValue(orderString) {
+      return Number(orderString).toLocaleString("pt-BR", {
+        style: "currency",
+        currency: "BRL",
+        minimumFractionDigits: 2,
+      });
+    },
+    setOrderStatus(status) {
+      switch (status) {
+        case "0":
+          return "PENDENTE DE CONFIRMAÇÃO";
+        case "1":
+          return "PEDIDO CONFIRMADO";
+        case "2":
+          return "NÃO RECONHECE O PEDIDO";
+        case "3":
+          return "MERCADORIA NÃO RECEBIDA";
+        case "4":
+          return "RECEBIDA COM AVARIA";
+        case "5":
+          return "DEVOLVIDA";
+        case "6":
+          return "RECEBIDA COM DEVOLUÇÃO PARCIAL";
+        case "7":
+          return "RECEBIDA E CONFIRMADA";
+        case "8":
+          return "PAGAMENTO AUTORIZADO";
+        default:
+          return "PENDENTE DE CONFIRMAÇÃO";
+      }
+    },
+  },
+  props: [
+    "orderNumber",
+    "buyer",
+    "provider",
+    "emissionDate",
+    "orderValue",
+    "oderStatusBuyer",
+  ],
 };
 </script>
 
@@ -15,32 +64,32 @@ export default {
       <div
         class="table-row-link-number valign-text-middle dmsans-medium-scarpa-flow-14px"
       >
-        1234
+        {{ orderNumber }}
       </div>
       <div
         class="table-row-link-sacado valign-text-middle dmsans-medium-scarpa-flow-14px"
       >
-        SACADO 001
+        {{ buyer.name }}
       </div>
       <div
         class="table-row-link-cedente valign-text-middle dmsans-medium-scarpa-flow-14px"
       >
-        CEDENTE 002
+        {{ provider.name }}
       </div>
       <div
         class="table-row-link-date valign-text-middle dmsans-medium-scarpa-flow-14px"
       >
-        12/02/2020
+        {{ formatDate(emissionDate) }}
       </div>
       <div
         class="table-row-link-price valign-text-middle dmsans-medium-persian-green-14px"
       >
-        R$ 49.725,00
+        {{ formatOrderValue(orderValue) }}
       </div>
       <div
         class="table-row-link-recebido valign-text-middle dmsans-bold-persian-green-12px"
       >
-        RECEBIDO
+        {{ setOrderStatus(oderStatusBuyer) }}
       </div>
       <TableRowButton />
     </div>
