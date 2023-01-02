@@ -8,24 +8,13 @@ export default {
     MenuLogo,
     MenuItemSelected,
   },
-  data() {
-    return { menuItemData };
-  },
-};
-
-const menuItemData = {
-  frame679: "/assets/images/icon-menu-hands.svg",
-  propostas: "Notas fiscais",
 };
 </script>
 
 <template>
   <aside class="aside-container">
-    <MenuLogo logo="/assets/images/cashforce-logo.svg" />
-    <MenuItemSelected
-      :frame679="menuItemData.frame679"
-      :propostas="menuItemData.propostas"
-    />
+    <MenuLogo />
+    <MenuItemSelected />
   </aside>
 </template>
 

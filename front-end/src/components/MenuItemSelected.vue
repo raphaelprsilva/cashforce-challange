@@ -1,7 +1,6 @@
 <script>
 export default {
   name: "MenuItemSelected",
-  props: ["frame679", "propostas"],
 };
 </script>
 
@@ -11,12 +10,16 @@ export default {
       <div class="rectangle"></div>
     </div>
     <div class="menu-items-container">
-      <img class="menu-item-icon" :src="frame679" alt="Hands Shaking Icon" />
+      <img
+        class="menu-item-icon"
+        src="../assets/images/icon-menu-hands.svg"
+        alt="Hands Shaking Icon"
+      />
       <div class="menu-item-orders-text">
         <div
           class="propostas-2valign-text-middle dmsans-medium-persian-green-14px"
         >
-          {{ propostas }}
+          Notas fiscais
         </div>
       </div>
     </div>

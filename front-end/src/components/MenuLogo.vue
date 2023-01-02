@@ -1,14 +1,13 @@
 <script>
 export default {
   name: "MenuLogo",
-  props: ["logo"],
 };
 </script>
 
 <template>
   <div class="menu-hero">
     <div class="sider-logo">
-      <img class="logo" :src="logo" alt="Logo" />
+      <img class="logo" src="../assets/images/cashforce-logo.svg" alt="Logo" />
     </div>
   </div>
 </template>
