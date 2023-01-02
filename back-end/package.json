@@ -4,10 +4,11 @@
   "description": "",
   "main": "src/server.js",
   "scripts": {
-    "test": "mocha tests/**/*$NAME*.test.js --exit",
+    "prestart": "npx sequelize-cli db:create",
     "start": "node .",
     "dev": "nodemon .",
-    "lint": "eslint --no-inline-config --no-error-on-unmatched-pattern -c .eslintrc.json ."
+    "lint": "eslint --no-inline-config --no-error-on-unmatched-pattern -c .eslintrc.json .",
+    "test": "mocha tests/**/*$NAME*.test.js --exit"
   },
   "keywords": [],
   "author": "Raphael",
