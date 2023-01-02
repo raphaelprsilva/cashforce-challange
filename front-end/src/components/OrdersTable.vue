@@ -1,4 +1,5 @@
 <script>
+import fetchOrders from "../utils/fetchOrders";
 import OrderTableRow from "./OrderTableRow.vue";
 
 export default {
@@ -14,29 +15,19 @@ export default {
     };
   },
   methods: {
-    getOrders() {
+    async getOrders() {
       this.isLoading = true;
       this.error = null;
-      fetch("http://localhost:3001/orders", {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-        },
-      })
-        .then((response) => {
-          if (response.ok) {
-            return response.json();
-          }
-        })
-        .then((data) => {
-          this.isLoading = false;
-          this.orders = data;
-        })
-        .catch((error) => {
-          console.error(error);
-          this.isLoading = false;
-          this.error = "Erro ao carregar as notas";
-        });
+
+      try {
+        const fetchedOrders = await fetchOrders();
+        this.orders = fetchedOrders;
+        this.isLoading = false;
+      } catch (error) {
+        console.error(error);
+        this.isLoading = false;
+        this.error = "Erro ao carregar as notas";
+      }
     },
   },
   mounted() {
