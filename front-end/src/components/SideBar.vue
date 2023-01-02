@@ -14,14 +14,14 @@ export default {
 };
 
 const menuItemData = {
-  frame679: "./src/assets/images/frame-679@1x.png",
+  frame679: "/assets/images/frame-679@1x.png",
   propostas: "Notas fiscais",
 };
 </script>
 
 <template>
   <aside class="aside-container">
-    <MenuLogo logo="../src/assets/images/logo@1x.png" />
+    <MenuLogo logo="/assets/images/logo@1x.png" />
     <MenuItemSelected
       :frame679="menuItemData.frame679"
       :propostas="menuItemData.propostas"
