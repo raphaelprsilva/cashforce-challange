@@ -1,4 +1,4 @@
-<h1 align="center">Desafio Fulltack Cashforce</h1>
+<h1 align="center">Desafio Fullstack Cashforce</h1>
 
 <div align="center">
   <img src="./front-end/src/assets/images/cashforce-logo.svg" alt="Blogs API" />
@@ -70,7 +70,7 @@ Abaixo estão os links para os repositórios do projeto:
 - [Back-end](https://github.com/raphaelprsilva/cashforce-challange/tree/main/back-end)
 - [Front-end](https://github.com/raphaelprsilva/cashforce-challange/tree/main/front-end)
 
-## Rodando o projeto na sua máquina
+## 🚀 Rodando o projeto na sua máquina
 
 Para rodar o projeto na sua máquina é necessário alguns pre requisitos:
 
