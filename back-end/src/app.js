@@ -1,5 +1,7 @@
 const express = require('express');
 const cors = require('cors');
+const swaggerUi = require('swagger-ui-express');
+const swaggerFile = require('../swagger-output.json');
 
 const orderRoutes = require('./routes/order.routes');
 const middlewares = require('./middlewares/notFound.middleware');
@@ -14,6 +16,7 @@ app.get('/', (_req, res) => {
 });
 
 app.use('/orders', orderRoutes);
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerFile));
 
 app.use('/*', middlewares.notFound);
 

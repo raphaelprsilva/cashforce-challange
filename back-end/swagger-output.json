@@ -1,0 +1,42 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Cashforce API",
+    "description": "Esta é a API do desafio da Cashforce",
+    "version": "1.0.0"
+  },
+  "host": "localhost:3001",
+  "basePath": "/",
+  "schemes": ["http"],
+  "paths": {
+    "/": {
+      "get": {
+        "summary": "",
+        "tags": ["Bem-vindo(a)"],
+        "description": "Retorna uma mensagem de boas-vindas",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/orders/": {
+      "get": {
+        "summary": "Lista todas as notas fiscais",
+        "tags": ["Orders"],
+        "description": "Retorna uma lista com todas as notas fiscais",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    }
+  }
+}
