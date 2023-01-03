@@ -7,7 +7,8 @@
     "start": "node .",
     "dev": "nodemon .",
     "lint": "eslint --no-inline-config --no-error-on-unmatched-pattern -c .eslintrc.json .",
-    "test": "mocha tests/**/*$NAME*.test.js --exit"
+    "test": "mocha tests/**/*$NAME*.test.js --exit",
+    "swagger-autogen": "node swagger.js"
   },
   "keywords": [],
   "author": "Raphael",
